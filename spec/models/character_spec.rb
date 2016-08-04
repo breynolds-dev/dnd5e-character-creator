@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe Character, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
+# RSpec.describe Character, type: :model do
+#   pending "add some examples to (or delete) #{__FILE__}"
+# end
 
 describe 'Character' do
   before(:each) do
@@ -69,12 +69,12 @@ describe 'Character' do
   end
 
   it 'has true values for trained skills' do
-    expect(@character.arcana).to be_true
-    expect(@character.history).to be_true
+    expect(@character.arcana).to be_truthy
+    expect(@character.history).to be_truthy
   end
 
   it 'has false values for untrained skills' do
-    expect(@character.insight).to be_false
-    expect(@character.stealth).to be_false
+    expect(@character.insight).to be_falsey
+    expect(@character.stealth).to be_falsey
   end
 end
