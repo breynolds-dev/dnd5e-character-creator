@@ -8,8 +8,8 @@
 ## Models
 
     1. Character
-    2. Class
-    3. Race
+    2. Class (A character can have many classes with different levels)
+    3. Race (Character belongs_to, Race has_many characters)
     4. Stat/Attribute
     5. Background
     6. Equipment

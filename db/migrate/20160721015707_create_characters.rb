@@ -1,40 +1,56 @@
+# Create Characters Table
 class CreateCharacters < ActiveRecord::Migration
   def change
     create_table :characters do |t|
-      t.string :size
-      t.string :klass
-      t.string :race
-      t.string :alignment
-      t.string :strength
-      t.string :dexterity
-      t.string :intelligence
-      t.string :wisdom
-      t.string :charisma
-      t.string :constitution
-      t.string :hp
-      t.string :ac
-      t.string :initiative
-      t.string :speed
-      t.string :vision
-      t.string :acrobatics
-      t.string :animal_handling
-      t.string :arcana
-      t.string :arcana
-      t.string :athletics
-      t.string :deception
-      t.string :history
-      t.string :insight
-      t.string :intimidation
-      t.string :investigation
-      t.string :medicine
-      t.string :nature
-      t.string :perception
-      t.string :performance
-      t.string :persuasion
-      t.string :religion
-      t.string :sleight_of_hand
-      t.string :stealth
-      t.string :survival
+      # Basic Character Info
+      t.string  :name
+      t.string  :player_name
+      t.string  :sex
+
+      # Character Race Info & Affected Fields
+      t.integer :race
+      t.integer :subrace
+      t.string  :size
+      t.integer :age
+      t.string  :height
+      t.float   :weight
+      t.string  :vision
+      t.string  :speed
+      t.integer :char_class
+      t.integer :char_class_archetype
+      t.string  :alignment
+      t.integer :hp
+      t.integer :ac
+      t.integer :initiative
+      t.integer :experience
+
+      # Abilities
+      t.integer :strength
+      t.integer :dexterity
+      t.integer :intelligence
+      t.integer :wisdom
+      t.integer :charisma
+      t.integer :constitution
+
+      # Skills - Trained True/False
+      t.boolean :acrobatics
+      t.boolean :animal_handling
+      t.boolean :arcana
+      t.boolean :athletics
+      t.boolean :deception
+      t.boolean :history
+      t.boolean :insight
+      t.boolean :intimidation
+      t.boolean :investigation
+      t.boolean :medicine
+      t.boolean :nature
+      t.boolean :perception
+      t.boolean :performance
+      t.boolean :persuasion
+      t.boolean :religion
+      t.boolean :sleight_of_hand
+      t.boolean :stealth
+      t.boolean :survival
 
       t.timestamps null: false
     end
