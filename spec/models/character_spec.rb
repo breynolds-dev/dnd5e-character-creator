@@ -5,8 +5,8 @@ require 'rails_helper'
 # end
 
 describe 'Character' do
-  before(:each) do
-    character_params = {
+  let(:attributes) do
+    {
       # Basic Character Info
       name: 'Bilbo Baggins',
       player_name: 'Peter Jackson',
@@ -57,10 +57,10 @@ describe 'Character' do
       stealth: true,
       survival: false
     }
-    @bilbo = Character.create!(character_params)
   end
 
   it 'can be created' do
+    @bilbo = create(:character, attributes)
     expect(@bilbo).to be_valid
   end
 
@@ -69,11 +69,15 @@ describe 'Character' do
   end
 
   it 'has true values for trained skills' do
+    @bilbo = create(:character, attributes)
     expect(@bilbo.stealth).to be_truthy
     expect(@bilbo.sleight_of_hand).to be_truthy
   end
 
+  # let(:intimindation_fail) { attributes.merge(intimidation: true) }
+
   it 'has false values for untrained skills' do
+    @bilbo = create(:character, attributes)
     expect(@bilbo.intimidation).to be_falsey
     expect(@bilbo.arcana).to be_falsey
   end
