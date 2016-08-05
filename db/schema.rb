@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20160721015707) do
     t.integer  "wisdom"
     t.integer  "charisma"
     t.integer  "constitution"
+
     t.boolean  "acrobatics"
     t.boolean  "animal_handling"
     t.boolean  "arcana"
@@ -59,6 +60,7 @@ ActiveRecord::Schema.define(version: 20160721015707) do
     t.boolean  "sleight_of_hand"
     t.boolean  "stealth"
     t.boolean  "survival"
+
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
