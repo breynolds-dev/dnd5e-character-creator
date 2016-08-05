@@ -40,28 +40,28 @@ describe 'Character' do
       # Skills - Trained True/False
       acrobatics: true,
       animal_handling: false,
-      arcana: true,
+      arcana: false,
       athletics: false,
       deception: false,
-      history: true,
+      history: false,
       insight: false,
       intimidation: false,
       investigation: false,
       medicine: false,
-      nature: true,
+      nature: false,
       perception: false,
       performance: false,
       persuasion: false,
       religion: false,
-      sleight_of_hand: false,
-      stealth: false,
+      sleight_of_hand: true,
+      stealth: true,
       survival: false
     }
-    @character = Character.create!(character_params)
+    @bilbo = Character.create!(character_params)
   end
 
   it 'can be created' do
-    expect(@character).to be_valid
+    expect(@bilbo).to be_valid
   end
 
   it 'has all of the attributes we expect from a character' do
@@ -69,12 +69,12 @@ describe 'Character' do
   end
 
   it 'has true values for trained skills' do
-    expect(@character.arcana).to be_truthy
-    expect(@character.history).to be_truthy
+    expect(@bilbo.stealth).to be_truthy
+    expect(@bilbo.sleight_of_hand).to be_truthy
   end
 
   it 'has false values for untrained skills' do
-    expect(@character.insight).to be_falsey
-    expect(@character.stealth).to be_falsey
+    expect(@bilbo.intimidation).to be_falsey
+    expect(@bilbo.arcana).to be_falsey
   end
 end
