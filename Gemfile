@@ -28,4 +28,5 @@ end
 
 group :test do
   gem 'simplecov', require: false
+  gem 'emoji-rspec', github: 'carhartl/emoji-rspec', branch: 'rspec-3'
 end
