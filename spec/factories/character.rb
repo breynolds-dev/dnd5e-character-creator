@@ -33,21 +33,21 @@ FactoryGirl.define do
     # Skills - Trained True/False
     acrobatics true
     animal_handling false
-    arcana true
+    arcana false
     athletics false
     deception false
-    history true
+    history false
     insight false
     intimidation false
     investigation false
     medicine false
-    nature true
+    nature false
     perception false
     performance false
     persuasion false
     religion false
-    sleight_of_hand false
-    stealth false
+    sleight_of_hand true
+    stealth true
     survival false
   end
 end
