@@ -20,8 +20,8 @@ class Race
     }
     @base_height = 66 # height 2d8, weight, 2d6
     @base_weight = 175
-    @mod_height = (random.randint(1, 8) + random.randint(1, 8))
-    @mod_weight = (random.randint(1, 6) + random.randint(1, 6))
+    @mod_height = 0 # (random.randint(1, 8) + random.randint(1, 8))
+    @mod_weight = 0 # (random.randint(1, 6) + random.randint(1, 6))
     @speed = 30
     @vision = 'normal'
     @skill = []
